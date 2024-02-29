@@ -24,3 +24,8 @@ list(residential_data['Tipo'].drop_duplicates())
 dataFrame_len = residential_data.shape[0]
 residential_data.index = range(dataFrame_len)
 print(residential_data.index)
+
+residential_data.to_csv('residential_rent.csv', sep=';', index=False)
+
+residential_data_2 = pd.read_csv('residential_rent.csv', sep=';')
+print(residential_data_2.head(10))
