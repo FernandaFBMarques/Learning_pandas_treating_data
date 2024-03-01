@@ -3,7 +3,6 @@
 
 # atalho = ctrl + /
 
-# Select properties classified as 'Casa', 'Casa de Condomínio' and 'Casa de Vila'
 # Select properties with an area between 60 and 100 square meters, including the limits
 # Select properties with at least 4 bedrooms and with rent less than R$ 2,000.00
 
@@ -16,3 +15,6 @@ print(data.head(10))
 selection = data['Tipo'] == 'Apartamento'
 n1 = data[selection].shape[0]
 
+# Select properties classified as 'Casa', 'Casa de Condomínio' and 'Casa de Vila'
+selection = (data['Tipo'] == 'Casa') | (data['Tipo'] == 'Casa de Condomínio') | (data['Tipo'] == 'Casa de Vila')
+n2 = data[selection].shape[0]
