@@ -11,3 +11,7 @@ print(students.head(10))
 selection = students['Approved'] == True
 approved = students[selection]
 print(approved.head(10))
+
+selection2 = (students.Approved == True) & (students.Genre == 'F')
+approvedF = students[selection2]
+print(approvedF.head(10))
