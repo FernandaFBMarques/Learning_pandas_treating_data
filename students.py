@@ -15,3 +15,6 @@ print(approved.head(10))
 selection2 = (students.Approved == True) & (students.Genre == 'F')
 approvedF = students[selection2]
 print(approvedF.head(10))
+
+selection3 = ((students.Age > 10) & (students.Age < 20)) | (students.Age >= 40)
+print(students[selection3])
