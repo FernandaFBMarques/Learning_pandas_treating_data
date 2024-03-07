@@ -8,3 +8,6 @@ students = pd.DataFrame({'Name': ['Ary', 'Cátia', 'Denis', 'Beto', 'Bruna', 'Da
                         columns=['Name', 'Age', 'Genre', 'Grades', 'Approved'])
 print(students.head(10))
 
+selection = students['Approved'] == True
+approved = students[selection]
+print(approved.head(10))
