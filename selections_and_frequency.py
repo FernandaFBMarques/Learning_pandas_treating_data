@@ -6,6 +6,7 @@
 import pandas as pd
 
 data = pd.read_csv('aluguel.csv', sep=';')
+print(data.head(10))
 
 selection = data['Tipo'] == 'Apartamento'
 n1 = data[selection].shape[0]  # .shape[0] makes it only keeps the True values
