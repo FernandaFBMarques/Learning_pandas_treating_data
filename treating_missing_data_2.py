@@ -12,10 +12,8 @@ real_estate = pd.DataFrame([['Apartment', None, 970, 68],
                            columns=['Type', 'Value', 'Condominium', 'Tax'])
 
 real_estate.dropna(subset=['Value'], inplace=True)
-print(real_estate)
 
 real_estate = real_estate.fillna({'Condominium': 0, 'Tax': 0})
-print(real_estate)
 
 real_estate.index = range(real_estate.shape[0])
 print(real_estate)
