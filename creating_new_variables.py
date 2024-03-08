@@ -28,4 +28,4 @@ print(data_aux.head(10))
 data.drop(['Valor Bruto', 'Valor Bruto m2'], axis=1, inplace=True)
 print(data_aux.head(10))
 
-data.to_csv('aluguel_residencial.csv', sep=';', index=False)
+data.to_csv('residential_rent.csv', sep=';', index=False)
