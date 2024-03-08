@@ -18,3 +18,11 @@ print(approvedF.head(10))
 
 selection3 = ((students.Age > 10) & (students.Age < 20)) | (students.Age >= 40)
 print(students[selection3])
+
+selection4 = students['Approved'] == False
+not_approved = students.loc[selection4, ['Name', 'Genre', 'Age']]
+print(not_approved.head(10))
+
+option2_selection4 = students['Approved'] == False
+not_approved2 = students[['Name', 'Genre', 'Age']][option2_selection4]
+print(not_approved2.head(10))
