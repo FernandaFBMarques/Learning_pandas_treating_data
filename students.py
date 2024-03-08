@@ -26,3 +26,6 @@ print(not_approved.head(10))
 option2_selection4 = students['Approved'] == False
 not_approved2 = students[['Name', 'Genre', 'Age']][option2_selection4]
 print(not_approved2.head(10))
+
+students.sort_values(by='Age', inplace=True)
+print(students.iloc[:3])
